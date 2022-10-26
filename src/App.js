@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Component } from "react";
 import CardList from "./components/card-list/card-list.component";
 import SearchBox from "./components/search-box/search-box.component";
 // import CardContainer from "./components/card-container/card-container";
@@ -26,7 +25,7 @@ const App = () => {
   useEffect(() => {
     fetch("http://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
-    .then((users) => setMonsters(users));
+    .then((users)    => setMonsters(users));
   }, [])
 
   //Only run the filteredMonsters arry method when monsters or searchField state has changed.
@@ -49,12 +48,12 @@ const App = () => {
     <h1 className="app-title">Bastard Monsters</h1>
 
     <SearchBox 
-      onChangeHandler ={onSearchChange} 
+      onChangeHandler ={ onSearchChange } 
       placeholder     ='Search Monsters'
       className       ='monsters-search-box'
     />
       
-    <CardList monsters ={filteredMonsters}/>
+    <CardList monsters ={ filteredMonsters }/>
   </div>
   )
 }

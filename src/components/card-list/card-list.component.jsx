@@ -1,20 +1,15 @@
-import { Component } from "react"
 import CardContainer from "../card-container/card-container";
 import './card-list.styles.css'
 
-class CardList extends Component {
-  render(){
-    const {monsters} = this.props
-
-    return (
-      <div className='card-list'>
-      {
-        monsters.map((monster) => {
-        return <CardContainer monster={monster}/>
+//Remember functional components only get two arguments, the first is the proper
+const CardList = ({ monsters }) => {
+  return (
+    <div className='card-list'>
+      {monsters.map((monster) => {
+        return <CardContainer monster={ monster } key={monster.id}/>
       })} 
-      </div>
-    )
-  }
+  </div>
+  )
 }
 
 export default CardList
