@@ -1,11 +1,11 @@
 import "./App.css";
+import React from 'react'
 import { useState, useEffect } from "react";
 import CardList from "./components/card-list/card-list.component";
 import SearchBox from "./components/search-box/search-box.component";
 // import CardContainer from "./components/card-container/card-container";
 
 const App = () => {
-  console.log('render')
   /* 
     inside the useState() method is passed the inital value
     the destructured variable searcField is the value, 

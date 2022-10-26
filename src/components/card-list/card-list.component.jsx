@@ -1,4 +1,5 @@
 import CardContainer from "../card-container/card-container";
+import React from 'react'
 import './card-list.styles.css'
 
 //Remember functional components only get two arguments, the first is the proper
