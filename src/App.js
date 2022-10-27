@@ -6,6 +6,7 @@ import SearchBox from "./components/search-box/search-box.component";
 // import CardContainer from "./components/card-container/card-container";
 
 const App = () => {
+  console.log('rendered')
   /* 
     inside the useState() method is passed the inital value
     the destructured variable searcField is the value, 
